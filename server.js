@@ -23,20 +23,6 @@ app.get("/about", (req,res) => {
     });
 })
 
-app.get("/profile", (req,res) => {
-    if (Object.keys(req.query).length !== 0){
-        res.json({
-            "id" : req.query.id,
-            "name" : req.query.name
-        })
-    }else {
-        res.json({
-            "id" : '',
-            "name" : ''
-        })
-    }
-})
-
 app.listen(PORT,() => {
     console.log(`Server run on port ${PORT}`)
 });
